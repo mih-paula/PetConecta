@@ -1,5 +1,3 @@
-DROP DATABASE petconecta;
-
 CREATE DATABASE petconecta;
 
 USE petconecta;
@@ -47,13 +45,14 @@ FOREIGN KEY (id_ong) REFERENCES ong(id)
 
 CREATE TABLE saude_animal(
 id INT AUTO_INCREMENT PRIMARY KEY,
-estado_saude VARCHAR(100) NOT NULL,
+estado_saude ENUM('DOENTE', 'SAUDAVEL') NOT NULL DEFAULT 'SAUDAVEL',
 vacina VARCHAR(100) NOT NULL,
 doenca VARCHAR(100),
 prescricao VARCHAR(100),
 id_animal INT NOT NULL,
 FOREIGN KEY (id_animal) REFERENCES animal(id)
 );
+
 
 
 CREATE TABLE historico(
