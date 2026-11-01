@@ -52,7 +52,7 @@ id_historico INT PRIMARY KEY AUTO_INCREMENT,
 tipo ENUM('CONSULTA','EXAME','ACIDENTE','ATUALIZACAO_SAUDE', 'ADOCAO', 'OBITO') NOT NULL,
 descricao TEXT,
 id_animal INT NOT NULL, FOREIGN KEY (id_animal) REFERENCES animal(id_animal) ON DELETE CASCADE,
-id_saude INT NULL, FOREIGN KEY (id_saude) REFERENCES saude(id) ON DELETE CASCADE,
+id_saude INT NULL, FOREIGN KEY (id_saude) 	REFERENCES saude(id) ON DELETE CASCADE,
 id_responsavel INT NULL, FOREIGN KEY (id_responsavel) REFERENCES usuario(id_usuario)
 );
 
