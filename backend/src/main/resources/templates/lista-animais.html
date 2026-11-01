@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PetConecta - Gerenciamento de Animais</title>
+</head>
+<body>
+
+<h2>Cadastrar Novo Animal</h2>
+
+<form th:action="@{/animais/salvar}" method="POST">
+    <label>Nome do Animal:</label>
+    <input type="text" name="nome" required />
+
+    <label>Idade:</label>
+    <input type="number" name="idade" required />
+
+    <button type="submit">Salvar no Sistema</button>
+</form>
+
+<hr>
+
+<h2>Animais sob Cuidados (PetConecta)</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Idade</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="animal : ${animaisNoBanco}">
+        <td th:text="${animal.id}">1</td>
+        <td th:text="${animal.nome}">Pipoca</td>
+        <td th:text="${animal.idade}">2</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
