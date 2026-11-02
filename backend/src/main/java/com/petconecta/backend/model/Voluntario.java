@@ -1,5 +1,7 @@
 package com.petconecta.backend.model;
 
+
+@Entity
 public class Voluntario extends Usuario{
 
     public Voluntario (long id, String nomeCompleto, String telefone, String email, String senha, boolean ativo) {

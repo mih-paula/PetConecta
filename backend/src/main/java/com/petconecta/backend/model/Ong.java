@@ -2,6 +2,7 @@ package com.petconecta.backend.model;
 
 import java.sql.Date;
 
+@Entity
 public class Ong {
     private long id;
     private String nome;

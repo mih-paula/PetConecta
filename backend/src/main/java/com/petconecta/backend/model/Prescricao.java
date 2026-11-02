@@ -2,6 +2,8 @@ package com.petconecta.backend.model;
 
 import java.util.Date;
 
+
+@Entity
 public class Prescricao {
     private long id;
     private String medicamento;
