@@ -1,8 +1,16 @@
 package com.petconecta.backend.model;
 
 import java.sql.Date;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 
 @Entity
+
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
 public class Ong {
     private long id;
     private String nome;
